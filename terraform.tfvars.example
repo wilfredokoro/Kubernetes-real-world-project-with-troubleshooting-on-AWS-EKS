@@ -1,0 +1,16 @@
+aws_region   = "us-east-1"
+project_name = "three-tier-eks"
+environment  = "dev"
+
+# auth.gavoksolutions.com is served from the existing gavoksolutions.com
+# zone (the one eks-fullstack already uses) rather than a new zone — see
+# README.md's "Using a subdomain of an existing zone" section.
+domain_name        = "auth.gavoksolutions.com"
+zone_name          = "gavoksolutions.com"
+create_hosted_zone = false
+
+azs        = ["us-east-1a", "us-east-1b", "us-east-1c"]
+# in terraform.tfvars
+enable_cert_manager = true
+acme_email           = "wilfred.okoro20@gmail.com"
+
